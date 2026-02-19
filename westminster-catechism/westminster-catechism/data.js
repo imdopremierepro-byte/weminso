@@ -80,7 +80,7 @@ const i18n = {
     struct6Title: '종말론', struct6Range: '제37-38문', struct6Badge: '종말론',
     struct7Title: '도덕법', struct7Range: '제39-44문', struct7Badge: '도덕법',
     struct8Title: '십계명', struct8Range: '제45-81문', struct8Badge: '십계명',
-    struct9Title: '죄와 보응', struct9Range: '제82-84문', struct9Badge: '죄론',
+    struct9Title: '죄와 보응 및 회개', struct9Range: '제82-87문', struct9Badge: '죄와 보응',
     struct10Title: '은혜의 방편', struct10Range: '제88-99문', struct10Badge: '은혜론',
     struct11Title: '주기도문', struct11Range: '제100-107문', struct11Badge: '기도',
     // Prayer section
@@ -155,13 +155,17 @@ const i18n = {
     castChar4Name: 'Guitar Boy', castChar4Role: 'Praise & Music Character',
     castChar5Name: 'Professor', castChar5Role: 'Theology Professor Character',
     // Structure section
-    struct1Title: 'Chief End of Man', struct1Range: 'Q. 1', struct1Badge: 'Introduction',
-    struct2Title: 'About God', struct2Range: 'Q. 2-12', struct2Badge: 'Scripture & God',
-    struct3Title: 'Creation & Providence', struct3Range: 'Q. 13-19', struct3Badge: 'God\'s Works',
-    struct4Title: 'Redemption', struct4Range: 'Q. 20-38', struct4Badge: 'Christ & Salvation',
-    struct5Title: 'Ten Commandments', struct5Range: 'Q. 39-84', struct5Badge: 'Moral Law',
-    struct6Title: 'Means of Grace', struct6Range: 'Q. 85-97', struct6Badge: 'Word, Sacraments, Prayer',
-    struct7Title: 'Lord\'s Prayer', struct7Range: 'Q. 98-107', struct7Badge: 'Prayer',
+    struct1Title: 'The Bible', struct1Range: 'Q. 1-3', struct1Badge: 'Intro',
+    struct2Title: 'About God', struct2Range: 'Q. 4-12', struct2Badge: 'God',
+    struct3Title: 'About Man', struct3Range: 'Q. 13-19', struct3Badge: 'Man',
+    struct4Title: 'Christology', struct4Range: 'Q. 20-28', struct4Badge: 'Christ',
+    struct5Title: 'Soteriology', struct5Range: 'Q. 29-36', struct5Badge: 'Salvation',
+    struct6Title: 'Eschatology', struct6Range: 'Q. 37-38', struct6Badge: 'Last Things',
+    struct7Title: 'Moral Law', struct7Range: 'Q. 39-44', struct7Badge: 'Law',
+    struct8Title: 'Ten Commandments', struct8Range: 'Q. 45-81', struct8Badge: 'Moral Law',
+    struct9Title: 'Sin & Repentance', struct9Range: 'Q. 82-87', struct9Badge: 'Law & Gospel',
+    struct10Title: 'Means of Grace', struct10Range: 'Q. 88-99', struct10Badge: 'Means of Grace',
+    struct11Title: 'The Lord\'s Prayer', struct11Range: 'Q. 100-107', struct11Badge: 'Prayer',
     // Prayer section
     prayer1Title: 'Discernment & Faith Heritage',
     prayer1Desc: 'Pray that many churches and families recognize the importance of doctrine, discern false teachings through Weminso, and preserve the heritage of faith for the next generation.',
@@ -169,7 +173,13 @@ const i18n = {
     prayer2Desc: 'Pray for English and Chinese translation ministry, and for collaboration among global youth teams including the newly joined Sydney, Australia team.',
     prayer3Title: 'Strength & Speed',
     prayer3Desc: 'Pray for the ministry team balancing studies and ministry, and for rapid production of remaining videos for waiting families and churches.',
-    personaDesc: 'Hear the stories of people who need Weminso'
+    personaDesc: 'Hear the stories of people who need Weminso',
+    book1Title: 'Are You Well in Your Faith?', book1Author: 'By Pastor Geum-nam Choi',
+    book1Desc: 'A commentary on the Shorter Catechism to build a foundation of faith.',
+    book2Title: 'Weminso Workbook Vol. 2', book2Author: 'By Moravian CUE',
+    book2Desc: 'The greatest joy is knowing God (Q. 4-6).',
+    book3Title: 'Weminso Workbook Vol. 1', book3Author: 'By Moravian CUE',
+    book3Desc: 'Let\'s go on a journey with Weminso (Q. 1-3).'
   }
 };
 

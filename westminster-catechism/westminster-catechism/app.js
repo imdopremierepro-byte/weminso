@@ -56,7 +56,7 @@ window.addEventListener('load', function () {
         if (!videoGrid || typeof videoData === 'undefined') return;
 
         const filteredVideos = currentVideoLang === 'all'
-            ? videoData.filter(v => v.lang !== 'ost')
+            ? videoData // Show everything in 'All' tab
             : videoData.filter(v => v.lang === currentVideoLang);
 
         if (filteredVideos.length === 0) {
@@ -228,12 +228,12 @@ window.addEventListener('load', function () {
         // Update all data-i18n elements
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.dataset.i18n;
-            if (texts[key]) {
-                // If element has HTML inside (like bold tags in about section), use innerHTML
+            const text = texts[key] || i18n.ko[key]; // Fallback to Korean if translation is missing
+            if (text) {
                 if (key.startsWith('aboutIntro') || key === 'heroDesc' || key.includes('Quote') || key.startsWith('book')) {
-                    el.innerHTML = texts[key];
+                    el.innerHTML = text;
                 } else {
-                    el.textContent = texts[key];
+                    el.textContent = text;
                 }
             }
         });
@@ -349,7 +349,8 @@ window.addEventListener('load', function () {
             filterTags.forEach(t => t.classList.remove('active'));
             tag.classList.add('active');
             currentFilter = tag.dataset.filter;
-            visibleCount = 20; // Reset pagination
+            // If filter is specific range, show all items in that range
+            visibleCount = currentFilter === 'all' ? 20 : 200;
             renderQA();
         });
     });
@@ -485,4 +486,18 @@ window.addEventListener('load', function () {
 
     // Final Sync
     setLanguage(currentLang);
+
+    // ===== Helper for Structure Cards =====
+    window.scrollToFilter = function (filterVal) {
+        // Find corresponding filter tag and click it
+        const targetTag = Array.from(filterTags).find(t => t.dataset.filter === filterVal);
+        if (targetTag) {
+            targetTag.click();
+            // Scroll to catechism section
+            const catechismSection = document.getElementById('qa');
+            if (catechismSection) {
+                catechismSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
 });
