@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웨민소 | 웨스트민스터 소요리문답 - 낮은울타리 모라비안큐</title>
+  <meta name="description" content="웨스트민스터 소요리문답(웨민소) - 500년 개혁신앙의 유산. 낮은울타리 모라비안큐가 제작한 다음세대를 위한 교리 교육 콘텐츠">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/logo-weminso.png" alt="웨민소" class="nav-logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link" data-i18n="navAbout">소개</a>
+        <a href="#videos" class="nav-link" data-i18n="navVideos">영상</a>
+        <a href="#qa" class="nav-link" data-i18n="navCatechism">문답</a>
+        <a href="#persona" class="nav-link" data-i18n="navPersona">왜 웨민소?</a>
+        <a href="#prayer" class="nav-link" data-i18n="navPrayer">기도</a>
+        <a href="#connect" class="nav-link" data-i18n="navConnect">연결</a>
+      </div>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="ko">KR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-gradient-orb hero-orb-1"></div>
+    <div class="hero-gradient-orb hero-orb-2"></div>
+    <div class="hero-gradient-orb hero-orb-3"></div>
+    <div class="hero-content hero-content-split">
+      <div class="hero-text-side">
+        <div class="hero-badge" data-animate="fade-up">
+          <img src="assets/logo-moravian-cue.png" alt="Moravian CUE" class="hero-badge-logo">
+        </div>
+        <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+          <img src="assets/logo-weminso.png" alt="웨민소" class="hero-title-logo">
+          <span class="hero-title-sub" data-i18n="heroSub">Westminster Shorter Catechism</span>
+        </h1>
+        <p class="hero-desc" data-animate="fade-up" data-delay="200" data-i18n="heroDesc">
+          500년 개혁신앙의 유산을 <br class="mobile-br">다음세대의 언어로 전합니다
+        </p>
+        <div class="hero-buttons" data-animate="fade-up" data-delay="300">
+          <a href="#videos" class="hero-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span data-i18n="heroCtaVideo">영상 보기</span>
+          </a>
+          <a href="#qa" class="hero-cta-outline">
+            <span data-i18n="heroCtaCatechism">문답 읽기</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="hero-stats" data-animate="fade-up" data-delay="400">
+          <div class="hero-stat">
+            <span class="hero-stat-number">107</span>
+            <span class="hero-stat-label" data-i18n="statQA">문답</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">20+</span>
+            <span class="hero-stat-label" data-i18n="statEpisodes">에피소드</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">500</span>
+            <span class="hero-stat-label" data-i18n="statYears">년 유산</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <img src="assets/emblem-weminso.png" alt="웨민소 엠블럼" class="about-emblem">
+        <span class="section-eyebrow" data-i18n="aboutEyebrow">ABOUT</span>
+        <h2 class="section-title" data-i18n="aboutTitle">웨민소란?</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-intro-with-character" data-animate="fade-up">
+        <div class="about-intro-text">
+          <p data-i18n="aboutIntro1">
+            <strong>웨민소</strong>는 <strong>웨스트민스터 소요리문답</strong>의 줄임말입니다.
+            1647년 웨스트민스터 총회에서 작성된 이 교리 교육서는 총 107개의 문답으로 구성되어 있으며,
+            기독교 신앙의 핵심 교리를 간결하고 체계적으로 정리한 500년 개혁신앙의 유산입니다.
+          </p>
+          <p data-i18n="aboutIntro2">
+            <strong>낮은울타리 문화선교회</strong>(1989년 신상언 선교사 설립)의 <strong>모라비안큐</strong> 팀이
+            최금남 목사(D.Min.)의 저서 <em>『그대 신앙은 안녕하십니까』</em>을 바탕으로
+            다음세대가 쉽고 재미있게 배울 수 있는 영상 콘텐츠를 제작하고 있습니다.
+          </p>
+        </div>
+        <div class="about-character">
+          <img src="assets/char-professor.png" alt="웨민소 교수 캐릭터" class="about-character-img">
+        </div>
+      </div>
+
+      <!-- Featured Video: 왜 소요리문답을 알아야 하는가 -->
+      <div class="about-featured-video" data-animate="fade-up">
+        <div class="about-featured-video-inner">
+          <div class="about-featured-video-player">
+            <iframe src="https://www.youtube-nocookie.com/embed/iqHe2XRPTgo?rel=0" title="웨스트민스터 소요리문답 영상"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="about-featured-video-text">
+            <span class="about-featured-badge">🎬 MUST WATCH</span>
+            <h3>웨스트민스터 소요리문답 제1문</h3>
+            <p>사람의 제일 되는 목적은 무엇입니까?<br>
+              하나님을 영화롭게 하고 영원토록 그를 즐거워하는 것입니다.<br>
+              웨민소 시리즈가 전하는 제1문의 핵심 내용을 확인해보세요.
+            </p>
+            <a href="https://youtu.be/iqHe2XRPTgo" target="_blank" rel="noopener" class="about-featured-watch-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              YouTube에서 보기
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card" data-animate="fade-up" data-delay="100">
+          <div class="about-card-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
+          </div>
+          <h3 data-i18n="aboutCard1Title">교리 교육</h3>
+          <p data-i18n="aboutCard1Desc">하나님에 대한 지식(문 1-38)과 하나님이 사람에게 요구하시는 의무(문 39-107)를 체계적으로 배웁니다.</p>
+        </div>
+        <div class="about-card" data-animate="fade-up" data-delay="200">
+          <div class="about-card-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+            </svg>
+          </div>
+          <h3 data-i18n="aboutCard2Title">영상 콘텐츠</h3>
+          <p data-i18n="aboutCard2Desc">모라비안큐가 제작한 쉽고 재미있는 영상으로 다음세대가 교리를 자연스럽게 익힐 수 있습니다.</p>
+        </div>
+        <div class="about-card" data-animate="fade-up" data-delay="300">
+          <div class="about-card-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+          </div>
+          <h3 data-i18n="aboutCard3Title">글로벌 세미나</h3>
+          <p data-i18n="aboutCard3Desc">광주, 부산, 서울은 물론 인도네시아 자카르타, 호주 시드니에서 세미나를 개최하고 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="videos" id="videos">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="videoEyebrow">EPISODES</span>
+        <h2 class="section-title" data-i18n="videoTitle">웨민소 영상 시리즈</h2>
+        <p class="section-desc" data-i18n="videoDesc">각 영상을 클릭하면 바로 시청할 수 있어요 🎬</p>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Deco Character: Guitar Boy -->
+      <div class="section-deco-wrapper" style="right: 5%; top: 100px;">
+        <img src="assets/char-guitar-boy.png" alt="기타 소년" class="section-deco-char floating-char">
+      </div>
+
+      <!-- Video Language Tabs -->
+      <div class="video-lang-tabs" data-animate="fade-up">
+        <button class="video-lang-tab active" data-video-lang="all">🌐 전체</button>
+        <button class="video-lang-tab" data-video-lang="ko">🇰🇷 한국어 <span class="video-count">20</span></button>
+        <button class="video-lang-tab" data-video-lang="en">🇺🇸 English <span class="video-count">2</span></button>
+        <button class="video-lang-tab" data-video-lang="zh">🇨🇳 中文 <span class="video-count">2</span></button>
+      </div>
+
+      <!-- Video Grid -->
+      <div class="video-grid" id="videoGrid">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="videoModalClose" aria-label="닫기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="video-modal-player">
+        <iframe id="videoIframe" src="" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="video-modal-info">
+        <span class="video-modal-episode" id="videoModalEpisode"></span>
+        <h3 class="video-modal-title" id="videoModalTitle"></h3>
+        <a id="videoModalYoutubeLink" href="#" target="_blank" rel="noopener" class="video-modal-youtube-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px; flex-shrink:0;">
+            <path
+              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+          </svg>
+          재생이 안 되나요? YouTube에서 보기
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Catechism Section -->
+  <section class="catechism" id="qa">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="catechismEyebrow">CATECHISM</span>
+        <h2 class="section-title" data-i18n="catechismTitle">문답 전문 (107문)</h2>
+        <div class="section-line"></div>
+      </div>
+
+
+
+      <!-- Search & Filter Bar -->
+      <div class="search-bar" data-animate="fade-up">
+        <div class="search-input-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="문답 검색 (예: 하나님, 구원, 십계명...)"
+            data-i18n-placeholder="searchPlaceholder">
+          <button class="search-clear" id="searchClear" aria-label="검색 초기화">✕</button>
+        </div>
+        <div class="filter-tags">
+          <button class="filter-tag active" data-filter="all" data-i18n="filterAll">전체</button>
+          <button class="filter-tag" data-filter="1-38" data-i18n="filterGod">하나님과 성경</button>
+          <button class="filter-tag" data-filter="39-81" data-i18n="filterCommandments">십계명</button>
+          <button class="filter-tag" data-filter="82-107" data-i18n="filterMeans">은혜의 방도</button>
+          <button class="filter-tag" data-filter="98-107" data-i18n="filterPrayer">주기도문</button>
+        </div>
+        <div class="search-result-count" id="searchResultCount"></div>
+      </div>
+
+      <!-- Q&A List -->
+      <div class="qa-list" id="qaList">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more-container" id="loadMoreContainer"
+        style="display: none; text-align: center; margin-top: 40px; margin-bottom: 60px;">
+        <button class="membership-btn" id="loadMoreBtn" data-i18n="loadMore">더보기</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Persona / Why Section -->
+  <section class="persona" id="persona">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="personaEyebrow">WHY WEMINSO?</span>
+        <h2 class="section-title" data-i18n="personaTitle">왜 웨민소를 알아야 할까요?</h2>
+        <div class="section-line"></div>
+      </div>
+
+
+      <div class="persona-grid">
+        <!-- Persona 1 -->
+        <div class="persona-card" data-animate="fade-up" data-delay="100">
+          <div class="persona-emoji">👧🏻</div>
+          <div class="persona-badge" data-i18n="persona1Badge">교회학교 학생</div>
+          <h3 data-i18n="persona1Name">이로운 (12세, 초등부)</h3>
+          <blockquote data-i18n="persona1Quote">
+            <strong>친구들의 어려운 질문에도 흔들리지 않게 됐어요!</strong><br><br>
+            학교에서 친구들이 '하나님 보여줘 봐', '과학이랑 성경은 다르잖아?' 하고 물어보면 말문이 막히고, <em>정말 하나님이 계신 건가?</em> 의문이 들곤 했어요. 그런데 웨민소를 배우고
+            나니까 최금남
+            목사님 말씀처럼 제 믿음에 <strong>흔들리지 않는 뼈대</strong>가 생긴 기분이에요. 목사님께서 세상 친구들이 공격해 올 때 우리가 준비가 안 되어 있으면 진다고 하셨는데, 이제는
+            하나님이 어떤 분인지, 우리가
+            왜 사는지 친구들한테도 자신 있게 설명할 수 있게 됐어요! 문답으로 배우니까 머리에 쏙쏙 들어와요.
+          </blockquote>
+        </div>
+
+        <!-- Persona 2 -->
+        <div class="persona-card" data-animate="fade-up" data-delay="200">
+          <div class="persona-emoji">👩🏻</div>
+          <div class="persona-badge" data-i18n="persona2Badge">자녀를 둔 부모</div>
+          <h3 data-i18n="persona2Name">고은별 (30대, 유초등 학부모)</h3>
+          <blockquote data-i18n="persona2Quote">
+            <strong>세상 가치관에 물들기 전, 아이에게 줄 수 있는 최고의 신앙유산입니다.</strong><br><br>
+            유튜브와 학교에서 쏟아지는 세상 문화 때문에 아이의 신앙이 걱정이었어요. <em>'너의 성별은 너가 결정해', '너가 정하는 것이 곧 진리다'</em>라고 학교에서 이야기할 때마다 어떻게
+            아이에게 이야기해줘야
+            할지 난감했습니다. 최금남 목사님의 <strong>기독교적 세계관을 먼저 심어줘야 한다</strong>는 말씀에 큰 도전을 받았습니다. 웨민소는 단순히 교리를 외우는 게
+            아니라, 아이가 세상을 바라보는 <strong>안경</strong>을 맞춰주는 과정이었어요. 이제 우리 아이는 세상의 유혹에도 흔들리지 않는 단단한 신앙의 체계를 잡아가고 있습니다.
+          </blockquote>
+        </div>
+
+        <!-- Persona 3 -->
+        <div class="persona-card" data-animate="fade-up" data-delay="300">
+          <div class="persona-emoji">⛪</div>
+          <div class="persona-badge" data-i18n="persona3Badge">교육 전도사</div>
+          <h3 data-i18n="persona3Name">김민석 전도사 (30대, 중고등부 담당)</h3>
+          <blockquote data-i18n="persona3Quote">
+            <strong>막막했던 교리 교육, 웨민소가 해답이 되었습니다.</strong><br><br>
+            아이들에게 교리를 가르쳐야 한다는 건 알지만, 딱딱하고 어려울까 봐 늘 고민이었습니다. 하지만 웨민소는 달랐습니다. 최금남 목사님께서 강조하신 것처럼 <strong>체계(System)는 체계로
+              맞서야 한다</strong>는 사실을 깨달았습니다. 세상 교육이 체계적으로 아이들을 공격해 올 때, 우리 아이들을 무방비 상태로 내보낼 수 없잖아요? 웨민소의 문답식 교육은 아이들의
+            눈높이에서 가장 확실하게 신앙의
+            체계를 세워주는 강력한 무기입니다.
+          </blockquote>
+        </div>
+
+        <!-- Persona 4 -->
+        <div class="persona-card" data-animate="fade-up" data-delay="400">
+          <div class="persona-emoji">🙏</div>
+          <div class="persona-badge" data-i18n="persona4Badge">청년</div>
+          <h3 data-i18n="persona4Name">김하은 (20대)</h3>
+          <blockquote data-i18n="persona4Quote">
+            <strong>무조건 믿으라는 신앙에서, 체계적인 신앙으로!</strong><br><br>
+            그동안 교회는 다녔지만, 솔직히 세상의 철학이나 과학적 논리 앞에서 기독교 진리가 초라해 보일 때가 있었어요. 모태신앙이지만, 어른들의 믿음은 <em>무조건 믿어</em>라는 맹목적이고
+            비합리적인 것처럼
+            보일 때도 있었고요. <strong>신앙의 체계가 없으면 세상학문의 체계에 백전백패</strong>라는 최금남 목사님의 말씀에 뼈를 맞은 듯했습니다. 웨민소를 통해 내 믿음을 체계적으로 정리하게
+            되니, 이제는 세상 학문
+            앞에서도 주눅 들지 않습니다. 진짜 자유함은 하나님을 아는 지식에서 나온다는 걸 경험하고 있어요.
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Structure Section -->
+  <section class="structure" id="structure">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="structureEyebrow">STRUCTURE</span>
+        <h2 class="section-title" data-i18n="structureTitle">문답 구성</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="structure-timeline" data-animate="fade-up">
+        <div class="timeline-item">
+          <div class="timeline-marker">I</div>
+          <div class="timeline-content">
+            <h3 data-i18n="struct1Title">사람의 제일 되는 목적</h3>
+            <p data-i18n="struct1Range">문 1</p>
+            <span class="timeline-badge" data-i18n="struct1Badge">서론</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">II</div>
+          <div class="timeline-content">
+            <h3 data-i18n="struct2Title">하나님에 대하여</h3>
+            <p data-i18n="struct2Range">문 2-12</p>
+            <span class="timeline-badge" data-i18n="struct2Badge">성경과 하나님</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">III</div>
+          <div class="timeline-content">
+            <h3 data-i18n="struct3Title">창조와 섭리</h3>
+            <p data-i18n="struct3Range">문 13-19</p>
+            <span class="timeline-badge" data-i18n="struct3Badge">하나님의 사역</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">IV</div>
+          <div class="timeline-content">
+            <h3 data-i18n="struct4Title">구속</h3>
+            <p data-i18n="struct4Range">문 20-38</p>
+            <span class="timeline-badge" data-i18n="struct4Badge">그리스도와 구원</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">V</div>
+          <div class="timeline-content">
+            <h3 data-i18n="struct5Title">십계명</h3>
+            <p data-i18n="struct5Range">문 39-84</p>
+            <span class="timeline-badge" data-i18n="struct5Badge">도덕법</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">VI</div>
+          <div class="timeline-content">
+            <h3 data-i18n="struct6Title">은혜의 방도</h3>
+            <p data-i18n="struct6Range">문 85-97</p>
+            <span class="timeline-badge" data-i18n="struct6Badge">말씀, 성례, 기도</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">VII</div>
+          <div class="timeline-content">
+            <h3 data-i18n="struct7Title">주기도문</h3>
+            <p data-i18n="struct7Range">문 98-107</p>
+            <span class="timeline-badge" data-i18n="struct7Badge">기도</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prayer Section -->
+  <section class="prayer" id="prayer">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="prayerEyebrow">PRAYER</span>
+        <h2 class="section-title" data-i18n="prayerTitle">기도제목</h2>
+        <p class="section-desc" data-i18n="prayerDesc">모라비안큐 기도편지 — 웨민소 사역을 위해 함께 기도해 주세요</p>
+        <div class="section-line"></div>
+      </div>
+
+
+      <div class="prayer-grid">
+        <div class="prayer-card" data-animate="fade-up" data-delay="100">
+          <div class="prayer-number">01</div>
+          <h3 data-i18n="prayer1Title">분별력과 신앙 유산 전수</h3>
+          <p data-i18n="prayer1Desc">많은 교회와 가정이 교리의 중요성을 깨달아 웨민소를 통해 이단과 세속적 영을 분별할 수 있도록, 다음세대가 신앙의 유산을 보존할 수 있도록 기도해
+            주세요.</p>
+        </div>
+        <div class="prayer-card" data-animate="fade-up" data-delay="200">
+          <div class="prayer-number">02</div>
+          <h3 data-i18n="prayer2Title">글로벌 확장</h3>
+          <p data-i18n="prayer2Desc">영어·중국어 번역 사역을 통해 웨민소가 전 세계로 퍼지도록, 최근 합류한 호주 시드니 팀을 포함한 전 세계 청년 팀의 협력을 위해 기도해 주세요.
+          </p>
+        </div>
+        <div class="prayer-card" data-animate="fade-up" data-delay="300">
+          <div class="prayer-number">03</div>
+          <h3 data-i18n="prayer3Title">힘과 속도</h3>
+          <p data-i18n="prayer3Desc">사역 팀이 학업과 사역을 병행하며 주의 힘을 얻도록, 기다리는 가정과 교회를 위해 남은 영상이 빠르게 제작될 수 있도록 기도해 주세요.</p>
+        </div>
+      </div>
+      <div class="prayer-cta-wrapper" data-animate="fade-up">
+        <a href="https://go.missionfund.org/weminso" target="_blank" rel="noopener" class="prayer-cta"
+          data-i18n="prayerCta">
+          🙏 웨민소 사역 후원하기
+        </a>
+        <p class="prayer-cta-desc" data-i18n="prayerCtaDesc">현재 월 목표 100만원 중 69% 달성 · 31명의 후원자와 함께 합니다</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Section -->
+  <section class="membership" id="membership">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="membershipEyebrow">MEMBERSHIP</span>
+        <h2 class="section-title" data-i18n="membershipTitle">가족회원 및 협력교회 초청</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="membership-grid">
+        <div class="membership-card family-card" data-animate="fade-up" data-delay="100">
+          <div class="membership-content-wrapper">
+            <div class="membership-icon">🏠</div>
+            <h3 data-i18n="familyMemberTitle">낮은울타리 가족회원</h3>
+            <p class="membership-desc" data-i18n="familyMemberDesc">
+              낮은울타리 월간호와 다양한 자료들을 무료로 받아보실 수 있습니다.
+              가정에서 쉽고 재미있게 웨민소를 가르칠 수 있도록 돕겠습니다.
+            </p>
+            <a href="https://pf.kakao.com/_LpKxexd" target="_blank" class="membership-btn"
+              data-i18n="familyMemberBtn">가족회원 신청하기</a>
+          </div>
+        </div>
+        <div class="membership-card church-card" data-animate="fade-up" data-delay="200">
+          <div class="membership-content-wrapper">
+            <div class="membership-icon">⛪</div>
+            <h3 data-i18n="churchMemberTitle">협력교회 파트너십</h3>
+            <p class="membership-desc" data-i18n="churchMemberDesc">
+              교회와 파트너십을 맺고 다음세대 양육에 필요한 전문 자료들을 지원해 드립니다.
+              개혁신앙의 유산을 널리 퍼트리는 일에 힘을 모아주세요.
+            </p>
+            <a href="https://pf.kakao.com/_LpKxexd" target="_blank" class="membership-btn"
+              data-i18n="churchMemberBtn">협력교회 문의하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Section -->
+  <section class="connect" id="connect">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="connectEyebrow">CONNECT</span>
+        <h2 class="section-title" data-i18n="connectTitle">낮은울타리와 연결하기</h2>
+        <p class="section-desc" data-i18n="connectDesc">1989년 신상언 선교사가 설립한 낮은울타리 문화선교회</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="connect-grid">
+        <a href="https://www.youtube.com/@najonwooltari" target="_blank" rel="noopener" class="connect-card"
+          data-animate="fade-up" data-delay="50">
+          <div class="connect-icon youtube-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.5 15.6V8.4L16 12l-6.5 3.6z" />
+            </svg>
+          </div>
+          <h3>YouTube</h3>
+          <p>웨민소 영상 시리즈</p>
+        </a>
+        <a href="http://www.wooltari.com" target="_blank" rel="noopener" class="connect-card" data-animate="fade-up"
+          data-delay="100">
+          <div class="connect-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+          </div>
+          <h3>공식 홈페이지</h3>
+          <p>wooltari.com</p>
+        </a>
+        <a href="https://www.instagram.com/wooltari1989/" target="_blank" rel="noopener" class="connect-card"
+          data-animate="fade-up" data-delay="150">
+          <div class="connect-icon insta-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <h3>Instagram</h3>
+          <p>@wooltari1989</p>
+        </a>
+        <a href="https://www.facebook.com/najonwooltari/" target="_blank" rel="noopener" class="connect-card"
+          data-animate="fade-up" data-delay="200">
+          <div class="connect-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </div>
+          <h3>Facebook</h3>
+          <p>낮은울타리</p>
+        </a>
+        <a href="https://pf.kakao.com/_LpKxexd" target="_blank" rel="noopener" class="connect-card"
+          data-animate="fade-up" data-delay="250">
+          <div class="connect-icon kakao-icon">💬</div>
+          <h3>카카오톡 채널</h3>
+          <p>실시간 소통</p>
+        </a>
+        <a href="https://blog.naver.com/najonwooltari" target="_blank" rel="noopener" class="connect-card"
+          data-animate="fade-up" data-delay="300">
+          <div class="connect-icon">📝</div>
+          <h3>네이버 블로그</h3>
+          <p>사역 소식</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logos">
+          <img src="assets/logo-weminso.png" alt="웨민소" class="footer-logo-img">
+          <div class="footer-logo-divider"></div>
+          <img src="assets/logo-moravian-cue.png" alt="Moravian CUE" class="footer-moravian-logo">
+        </div>
+        <div class="footer-brand">
+          <span data-i18n="footerBrand">웨민소 · 웨스트민스터 소요리문답</span>
+        </div>
+        <p class="footer-org" data-i18n="footerOrg">낮은울타리 문화선교회 · 모라비안큐</p>
+        <p class="footer-text" data-i18n="footerText">Soli Deo Gloria — 오직 하나님께 영광</p>
+        <p class="footer-copy">&copy; Najonwooltari Moravian Q · Westminster Shorter Catechism Korean</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="맨 위로">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <script src="data.js?v=10"></script>
+  <script src="app.js?v=10"></script>
+
+</body>
+
+</html>
