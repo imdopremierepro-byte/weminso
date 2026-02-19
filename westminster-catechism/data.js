@@ -1,7 +1,7 @@
 // ===== Internationalization (i18n) =====
 const i18n = {
   ko: {
-    navAbout: '소개', navVideos: '영상', navCatechism: '문답',
+    navAbout: '소개', navVideos: '영상', navBooks: '도서', navCatechism: '문답',
     navPersona: '왜 웨민소?', navPrayer: '기도', navConnect: '연결',
     heroBadge: '모라비안큐 · Moravian CUE',
     heroTitle: '웨민소',
@@ -33,6 +33,15 @@ const i18n = {
     prayerCta: '🙏 웨민소 사역 후원하기',
     prayerCtaDesc: '현재 월 목표 100만원 중 69% 달성 · 31명의 후원자와 함께 합니다',
     membershipEyebrow: 'MEMBERSHIP', membershipTitle: '가족회원 및 협력교회 초청',
+    booksEyebrow: 'BOOKS', booksTitle: '웨민소 관련 도서',
+    booksDesc: '다음세대를 위한 체계적인 신앙 교육 교재를 만나보세요 📚',
+    book1Title: '그대 신앙은 안녕하십니까', book1Author: '최근남 지음',
+    book1Desc: '신앙의 뼈대를 세우는 소요리문답 해설서',
+    book1PurchaseInfo: '',
+    book2Title: '웨민소 워크북 2권', book2Author: '모라비안큐 제작',
+    book2Desc: '하나님을 알아가는 최고의 기쁨 (제4-6문)',
+    book3Title: '웨민소 워크북 1권', book3Author: '모라비안큐 제작',
+    book3Desc: '웨민소와 함께 여행을 떠나요 (제1-3문)',
     familyMemberTitle: '낮은울타리 가족회원',
     familyMemberDesc: '낮은울타리 월간호와 다양한 자료들을 무료로 받아보실 수 있습니다. 가정에서 쉽고 재미있게 웨민소를 가르칠 수 있도록 돕겠습니다.',
     familyMemberBtn: '가족회원 신청하기',
@@ -63,13 +72,17 @@ const i18n = {
     castChar4Name: '기타 소년', castChar4Role: '찬양 & 음악 캐릭터',
     castChar5Name: '교수님', castChar5Role: '신학 교수 캐릭터',
     // Structure section
-    struct1Title: '사람의 제일 되는 목적', struct1Range: '문 1', struct1Badge: '서론',
-    struct2Title: '하나님에 대하여', struct2Range: '문 2-12', struct2Badge: '성경과 하나님',
-    struct3Title: '창조와 섭리', struct3Range: '문 13-19', struct3Badge: '하나님의 사역',
-    struct4Title: '구속', struct4Range: '문 20-38', struct4Badge: '그리스도와 구원',
-    struct5Title: '십계명', struct5Range: '문 39-84', struct5Badge: '도덕법',
-    struct6Title: '은혜의 방도', struct6Range: '문 85-97', struct6Badge: '말씀, 성례, 기도',
-    struct7Title: '주기도문', struct7Range: '문 98-107', struct7Badge: '기도',
+    struct1Title: '성경', struct1Range: '제1-3문', struct1Badge: '서론',
+    struct2Title: '하나님론', struct2Range: '제4-12문', struct2Badge: '신론',
+    struct3Title: '인간론', struct3Range: '제13-19문', struct3Badge: '인간론',
+    struct4Title: '기독론', struct4Range: '제20-28문', struct4Badge: '기독론',
+    struct5Title: '구원론', struct5Range: '제29-36문', struct5Badge: '구원론',
+    struct6Title: '종말론', struct6Range: '제37-38문', struct6Badge: '종말론',
+    struct7Title: '도덕법', struct7Range: '제39-44문', struct7Badge: '도덕법',
+    struct8Title: '십계명', struct8Range: '제45-81문', struct8Badge: '십계명',
+    struct9Title: '죄와 보응 및 회개', struct9Range: '제82-87문', struct9Badge: '죄와 보응',
+    struct10Title: '은혜의 방편', struct10Range: '제88-99문', struct10Badge: '은혜론',
+    struct11Title: '주기도문', struct11Range: '제100-107문', struct11Badge: '기도',
     // Prayer section
     prayer1Title: '분별력과 신앙 유산 전수',
     prayer1Desc: '많은 교회와 가정이 교리의 중요성을 깨달아 웨민소를 통해 이단과 세속적 영을 분별할 수 있도록, 다음세대가 신앙의 유산을 보존할 수 있도록 기도해 주세요.',
@@ -142,13 +155,17 @@ const i18n = {
     castChar4Name: 'Guitar Boy', castChar4Role: 'Praise & Music Character',
     castChar5Name: 'Professor', castChar5Role: 'Theology Professor Character',
     // Structure section
-    struct1Title: 'Chief End of Man', struct1Range: 'Q. 1', struct1Badge: 'Introduction',
-    struct2Title: 'About God', struct2Range: 'Q. 2-12', struct2Badge: 'Scripture & God',
-    struct3Title: 'Creation & Providence', struct3Range: 'Q. 13-19', struct3Badge: 'God\'s Works',
-    struct4Title: 'Redemption', struct4Range: 'Q. 20-38', struct4Badge: 'Christ & Salvation',
-    struct5Title: 'Ten Commandments', struct5Range: 'Q. 39-84', struct5Badge: 'Moral Law',
-    struct6Title: 'Means of Grace', struct6Range: 'Q. 85-97', struct6Badge: 'Word, Sacraments, Prayer',
-    struct7Title: 'Lord\'s Prayer', struct7Range: 'Q. 98-107', struct7Badge: 'Prayer',
+    struct1Title: 'The Bible', struct1Range: 'Q. 1-3', struct1Badge: 'Intro',
+    struct2Title: 'About God', struct2Range: 'Q. 4-12', struct2Badge: 'God',
+    struct3Title: 'About Man', struct3Range: 'Q. 13-19', struct3Badge: 'Man',
+    struct4Title: 'Christology', struct4Range: 'Q. 20-28', struct4Badge: 'Christ',
+    struct5Title: 'Soteriology', struct5Range: 'Q. 29-36', struct5Badge: 'Salvation',
+    struct6Title: 'Eschatology', struct6Range: 'Q. 37-38', struct6Badge: 'Last Things',
+    struct7Title: 'Moral Law', struct7Range: 'Q. 39-44', struct7Badge: 'Law',
+    struct8Title: 'Ten Commandments', struct8Range: 'Q. 45-81', struct8Badge: 'Moral Law',
+    struct9Title: 'Sin & Repentance', struct9Range: 'Q. 82-87', struct9Badge: 'Law & Gospel',
+    struct10Title: 'Means of Grace', struct10Range: 'Q. 88-99', struct10Badge: 'Means of Grace',
+    struct11Title: 'The Lord\'s Prayer', struct11Range: 'Q. 100-107', struct11Badge: 'Prayer',
     // Prayer section
     prayer1Title: 'Discernment & Faith Heritage',
     prayer1Desc: 'Pray that many churches and families recognize the importance of doctrine, discern false teachings through Weminso, and preserve the heritage of faith for the next generation.',
@@ -156,7 +173,13 @@ const i18n = {
     prayer2Desc: 'Pray for English and Chinese translation ministry, and for collaboration among global youth teams including the newly joined Sydney, Australia team.',
     prayer3Title: 'Strength & Speed',
     prayer3Desc: 'Pray for the ministry team balancing studies and ministry, and for rapid production of remaining videos for waiting families and churches.',
-    personaDesc: 'Hear the stories of people who need Weminso'
+    personaDesc: 'Hear the stories of people who need Weminso',
+    book1Title: 'Are You Well in Your Faith?', book1Author: 'By Pastor Geum-nam Choi',
+    book1Desc: 'A commentary on the Shorter Catechism to build a foundation of faith.',
+    book2Title: 'Weminso Workbook Vol. 2', book2Author: 'By Moravian CUE',
+    book2Desc: 'The greatest joy is knowing God (Q. 4-6).',
+    book3Title: 'Weminso Workbook Vol. 1', book3Author: 'By Moravian CUE',
+    book3Desc: 'Let\'s go on a journey with Weminso (Q. 1-3).'
   }
 };
 
@@ -951,7 +974,28 @@ const videoData = [
   {
     episode: 2, lang: 'zh',
     videoId: 'MmY3a0hEB9E',
-    title: 'WSC 第2集 — 小教理问答的由来',
-    desc: '父母与子女的信仰教育书'
-  }
+    title: 'WSC 第2集 — 小教理问答의 由來',
+    desc: '父母와 子女의 信仰敎育書'
+  },
+  // ===== OST 찬양 =====
+  { episode: 1, lang: 'ost', videoId: 'kY3FG9_CE4k', title: '[웨민소 OST_M/V] 19화 - ▭하신 하나님', desc: '웨민소 찬양' },
+  { episode: 2, lang: 'ost', videoId: 'jJpfW_IkJoM', title: '[웨민소 OST_M/V] 18화 - 하나님의 속성', desc: '웨민소 찬양' },
+  { episode: 3, lang: 'ost', videoId: 'L8a0L0Wpo88', title: '[웨민소 OST_M/V] 17화 - 인격적 하나님', desc: '웨민소 찬양' },
+  { episode: 4, lang: 'ost', videoId: '3SnSvZPvakk', title: '[웨민소 OST_M/V] 16화 - 하나님은 영이시니', desc: '웨민소 찬양' },
+  { episode: 5, lang: 'ost', videoId: 'ermi5ULKtw8', title: '[웨민소 OST_M/V] 15화 - 하나님을 경외하는 것이 나의 본분', desc: '웨민소 찬양' },
+  { episode: 6, lang: 'ost', videoId: 'fcBCDdOuUBk', title: '[웨민소 OST_M/V] 14화 - 하나님을 믿는 참된 믿음', desc: '웨민소 찬양' },
+  { episode: 7, lang: 'ost', videoId: 'ADjrLCKKX60', title: '[웨민소 OST_M/V] 13화 - 증거해', desc: '웨민소 찬양' },
+  { episode: 8, lang: 'ost', videoId: '41NexmXp5bo', title: '[웨민소 OST_M/V] 12화 - 특별계시', desc: '웨민소 찬양' },
+  { episode: 9, lang: 'ost', videoId: 'LURKFoi4mOg', title: '[웨민소 OST_M/V] 11화 - 신앙생활의 유일한 규범', desc: '웨민소 찬양' },
+  { episode: 10, lang: 'ost', videoId: 'HcQE80OD_Fg', title: '[웨민소 OST_M/V] 10화 - 하나님의 말씀', desc: '웨민소 찬양' },
+  { episode: 11, lang: 'ost', videoId: '4WzAusJTCsw', title: '[웨민소 OST_M/V] 9화 - Everybody Say~', desc: '웨민소 찬양' },
+  { episode: 12, lang: 'ost', videoId: '0NhhCF6sapI', title: '[웨민소 OST_M/V] 8화 - 초점 관점 지향점', desc: '웨민소 찬양' },
+  { episode: 13, lang: 'ost', videoId: 'Af8m9IKwtAo', title: '[웨민소 OST_M/V] 7화 - 신뢰, 만족, 기쁨', desc: '웨민소 찬양' },
+  { episode: 14, lang: 'ost', videoId: 'PzFP2y-OLHg', title: '[웨민소 OST_M/V] 6화 - 영광과 영화', desc: '웨민소 찬양' },
+  { episode: 15, lang: 'ost', videoId: 'ol-mVLcXGFs', title: '[웨민소 OST_M/V] 5화 - 하나님의', desc: '웨민소 찬양' },
+  { episode: 16, lang: 'ost', videoId: '0k_-YHIQHA0', title: '[웨민소 OST_M/V] 4화 - 사람의 제일 되는 목적', desc: '웨민소 찬양' },
+  { episode: 17, lang: 'ost', videoId: 'lWZR2k2vhEw', title: '[웨민소 OST_M/V] 3화 - 웨민소 웨민소!', desc: '웨민소 찬양' },
+  { episode: 18, lang: 'ost', videoId: 'FDTiyWySJ2U', title: '[웨민소 OST_M/V] 2화 - 요리 요리 소요리', desc: '웨민소 찬양' },
+  { episode: 19, lang: 'ost', videoId: 'ZkwXlqPSams', title: '[웨민소 OST_M/V] 1화 - 살아 살아', desc: '웨민소 찬양' },
+  { episode: 20, lang: 'ost', videoId: 'jpYW3MV3y_o', title: '[웨민소 OST_M/V] 주제가 - 웨민소 여행을 떠나요', desc: '웨민소 찬양' }
 ];

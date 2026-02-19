@@ -63,4 +63,18 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
     console.log(`웨민소 서버 실행 중: http://localhost:${PORT}`);
+
+    // 서버 시작 시 자동 동기화 실행
+    console.log('기다려 주세요. 유튜브 영상을 동기화하는 중입니다...');
+    const { exec } = require('child_process');
+    exec('node sync-videos.js', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`동기화 오류: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`동기화 알림: ${stderr}`);
+        }
+        console.log(stdout);
+    });
 });
