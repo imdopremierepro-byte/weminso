@@ -24,6 +24,7 @@
       <div class="nav-links">
         <a href="#about" class="nav-link" data-i18n="navAbout">소개</a>
         <a href="#videos" class="nav-link" data-i18n="navVideos">영상</a>
+        <a href="#books" class="nav-link" data-i18n="navBooks">도서</a>
         <a href="#qa" class="nav-link" data-i18n="navCatechism">문답</a>
         <a href="#persona" class="nav-link" data-i18n="navPersona">왜 웨민소?</a>
         <a href="#prayer" class="nav-link" data-i18n="navPrayer">기도</a>
@@ -211,6 +212,7 @@
       <div class="video-lang-tabs" data-animate="fade-up">
         <button class="video-lang-tab active" data-video-lang="all">🌐 전체</button>
         <button class="video-lang-tab" data-video-lang="ko">🇰🇷 한국어 <span class="video-count">20</span></button>
+        <button class="video-lang-tab" data-video-lang="ost">🎵 OST <span class="video-count">20</span></button>
         <button class="video-lang-tab" data-video-lang="en">🇺🇸 English <span class="video-count">2</span></button>
         <button class="video-lang-tab" data-video-lang="zh">🇨🇳 中文 <span class="video-count">2</span></button>
       </div>
@@ -252,6 +254,56 @@
     </div>
   </div>
 
+  <!-- Books Section -->
+  <section class="books" id="books">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow" data-i18n="booksEyebrow">BOOKS</span>
+        <h2 class="section-title" data-i18n="booksTitle">웨민소 관련 도서</h2>
+        <p class="section-desc" data-i18n="booksDesc">다음세대를 위한 체계적인 신앙 교육 교재를 만나보세요 📚</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="books-grid" data-animate="fade-up">
+        <!-- Book 1 -->
+        <div class="book-card">
+          <div class="book-cover-wrapper" onclick="openImageModal('assets/book-choi.png')">
+            <img src="assets/book-choi.png" alt="그대 신앙은 안녕하십니까" class="book-cover">
+          </div>
+          <div class="book-info">
+            <h3 data-i18n="book1Title"></h3>
+            <p class="book-author" data-i18n="book1Author"></p>
+            <p class="book-summary" data-i18n="book1Desc"></p>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+          <div class="book-cover-wrapper" onclick="openImageModal('assets/book-workbook-2.jpg')">
+            <img src="assets/book-workbook-2.jpg" alt="웨민소 워크북 2권" class="book-cover">
+          </div>
+          <div class="book-info">
+            <h3 data-i18n="book2Title"></h3>
+            <p class="book-author" data-i18n="book2Author"></p>
+            <p class="book-summary" data-i18n="book2Desc"></p>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+          <div class="book-cover-wrapper" onclick="openImageModal('assets/book-workbook-1.jpg')">
+            <img src="assets/book-workbook-1.jpg" alt="웨민소 워크북 1권" class="book-cover">
+          </div>
+          <div class="book-info">
+            <h3 data-i18n="book3Title"></h3>
+            <p class="book-author" data-i18n="book3Author"></p>
+            <p class="book-summary" data-i18n="book3Desc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Catechism Section -->
   <section class="catechism" id="qa">
     <div class="container">
@@ -277,10 +329,17 @@
         </div>
         <div class="filter-tags">
           <button class="filter-tag active" data-filter="all" data-i18n="filterAll">전체</button>
-          <button class="filter-tag" data-filter="1-38" data-i18n="filterGod">하나님과 성경</button>
-          <button class="filter-tag" data-filter="39-81" data-i18n="filterCommandments">십계명</button>
-          <button class="filter-tag" data-filter="82-107" data-i18n="filterMeans">은혜의 방도</button>
-          <button class="filter-tag" data-filter="98-107" data-i18n="filterPrayer">주기도문</button>
+          <button class="filter-tag" data-filter="1-3">성경</button>
+          <button class="filter-tag" data-filter="4-12">하나님론</button>
+          <button class="filter-tag" data-filter="13-19">인간론</button>
+          <button class="filter-tag" data-filter="20-28">기독론</button>
+          <button class="filter-tag" data-filter="29-36">구원론</button>
+          <button class="filter-tag" data-filter="37-38">종말론</button>
+          <button class="filter-tag" data-filter="39-44">도덕법</button>
+          <button class="filter-tag" data-filter="45-81">십계명</button>
+          <button class="filter-tag" data-filter="82-84">죄와 보응</button>
+          <button class="filter-tag" data-filter="88-99">은혜의 방편</button>
+          <button class="filter-tag" data-filter="100-107">주기도문</button>
         </div>
         <div class="search-result-count" id="searchResultCount"></div>
       </div>
@@ -379,62 +438,83 @@
         <h2 class="section-title" data-i18n="structureTitle">문답 구성</h2>
         <div class="section-line"></div>
       </div>
-      <div class="structure-timeline" data-animate="fade-up">
-        <div class="timeline-item">
-          <div class="timeline-marker">I</div>
-          <div class="timeline-content">
-            <h3 data-i18n="struct1Title">사람의 제일 되는 목적</h3>
-            <p data-i18n="struct1Range">문 1</p>
-            <span class="timeline-badge" data-i18n="struct1Badge">서론</span>
-          </div>
+      <div class="structure-grid">
+        <!-- Item 1 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="100">
+          <div class="struct-num">01</div>
+          <h3 data-i18n="struct1Title">성경</h3>
+          <p class="struct-range" data-i18n="struct1Range">제1-3문</p>
+          <span class="struct-badge" data-i18n="struct1Badge">서론</span>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">II</div>
-          <div class="timeline-content">
-            <h3 data-i18n="struct2Title">하나님에 대하여</h3>
-            <p data-i18n="struct2Range">문 2-12</p>
-            <span class="timeline-badge" data-i18n="struct2Badge">성경과 하나님</span>
-          </div>
+        <!-- Item 2 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="150">
+          <div class="struct-num">02</div>
+          <h3 data-i18n="struct2Title">하나님론</h3>
+          <p class="struct-range" data-i18n="struct2Range">제4-12문</p>
+          <span class="struct-badge" data-i18n="struct2Badge">신론</span>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">III</div>
-          <div class="timeline-content">
-            <h3 data-i18n="struct3Title">창조와 섭리</h3>
-            <p data-i18n="struct3Range">문 13-19</p>
-            <span class="timeline-badge" data-i18n="struct3Badge">하나님의 사역</span>
-          </div>
+        <!-- Item 3 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="200">
+          <div class="struct-num">03</div>
+          <h3 data-i18n="struct3Title">인간론</h3>
+          <p class="struct-range" data-i18n="struct3Range">제13-19문</p>
+          <span class="struct-badge" data-i18n="struct3Badge">인간론</span>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">IV</div>
-          <div class="timeline-content">
-            <h3 data-i18n="struct4Title">구속</h3>
-            <p data-i18n="struct4Range">문 20-38</p>
-            <span class="timeline-badge" data-i18n="struct4Badge">그리스도와 구원</span>
-          </div>
+        <!-- Item 4 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="250">
+          <div class="struct-num">04</div>
+          <h3 data-i18n="struct4Title">기독론</h3>
+          <p class="struct-range" data-i18n="struct4Range">제20-28문</p>
+          <span class="struct-badge" data-i18n="struct4Badge">기독론</span>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">V</div>
-          <div class="timeline-content">
-            <h3 data-i18n="struct5Title">십계명</h3>
-            <p data-i18n="struct5Range">문 39-84</p>
-            <span class="timeline-badge" data-i18n="struct5Badge">도덕법</span>
-          </div>
+        <!-- Item 5 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="300">
+          <div class="struct-num">05</div>
+          <h3 data-i18n="struct5Title">구원론</h3>
+          <p class="struct-range" data-i18n="struct5Range">제29-36문</p>
+          <span class="struct-badge" data-i18n="struct5Badge">구원론</span>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">VI</div>
-          <div class="timeline-content">
-            <h3 data-i18n="struct6Title">은혜의 방도</h3>
-            <p data-i18n="struct6Range">문 85-97</p>
-            <span class="timeline-badge" data-i18n="struct6Badge">말씀, 성례, 기도</span>
-          </div>
+        <!-- Item 6 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="350">
+          <div class="struct-num">06</div>
+          <h3 data-i18n="struct6Title">종말론</h3>
+          <p class="struct-range" data-i18n="struct6Range">제37-38문</p>
+          <span class="struct-badge" data-i18n="struct6Badge">종말론</span>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">VII</div>
-          <div class="timeline-content">
-            <h3 data-i18n="struct7Title">주기도문</h3>
-            <p data-i18n="struct7Range">문 98-107</p>
-            <span class="timeline-badge" data-i18n="struct7Badge">기도</span>
-          </div>
+        <!-- Item 7 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="400">
+          <div class="struct-num">07</div>
+          <h3 data-i18n="struct7Title">도덕법</h3>
+          <p class="struct-range" data-i18n="struct7Range">제39-44문</p>
+          <span class="struct-badge" data-i18n="struct7Badge">도덕법</span>
+        </div>
+        <!-- Item 8 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="450">
+          <div class="struct-num">08</div>
+          <h3 data-i18n="struct8Title">십계명</h3>
+          <p class="struct-range" data-i18n="struct8Range">제45-81문</p>
+          <span class="struct-badge" data-i18n="struct8Badge">십계명</span>
+        </div>
+        <!-- Item 9 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="500">
+          <div class="struct-num">09</div>
+          <h3 data-i18n="struct9Title">죄와 보응</h3>
+          <p class="struct-range" data-i18n="struct9Range">제82-84문</p>
+          <span class="struct-badge" data-i18n="struct9Badge">죄론</span>
+        </div>
+        <!-- Item 10 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="550">
+          <div class="struct-num">10</div>
+          <h3 data-i18n="struct10Title">은혜의 방편</h3>
+          <p class="struct-range" data-i18n="struct10Range">제88-99문</p>
+          <span class="struct-badge" data-i18n="struct10Badge">은혜론</span>
+        </div>
+        <!-- Item 11 -->
+        <div class="structure-card" data-animate="fade-up" data-delay="600">
+          <div class="struct-num">11</div>
+          <h3 data-i18n="struct11Title">주기도문</h3>
+          <p class="struct-range" data-i18n="struct11Range">제100-107문</p>
+          <span class="struct-badge" data-i18n="struct11Badge">기도</span>
         </div>
       </div>
     </div>
@@ -618,6 +698,12 @@
 
   <script src="data.js?v=10"></script>
   <script src="app.js?v=10"></script>
+
+  <!-- Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <button class="image-modal-close">✕</button>
+    <img src="" alt="Full size book" class="image-modal-content" id="imageModalContent">
+  </div>
 
 </body>
 
