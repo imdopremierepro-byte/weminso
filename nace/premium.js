@@ -19,15 +19,6 @@ mobile?.querySelectorAll("a").forEach((link) => link.addEventListener("click", (
   mobile.classList.remove("open");
 }));
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add("visible");
-    revealObserver.unobserve(entry.target);
-  });
-}, { threshold: 0.1, rootMargin: "0px 0px -45px" });
-document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
-
 const form = document.querySelector(".join-form");
 form?.addEventListener("submit", (event) => {
   const selectedCourses = form.querySelectorAll('input[name="참여 과정"]:checked');
